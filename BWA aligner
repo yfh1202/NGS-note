@@ -1,3 +1,12 @@
 Note of BWA aligner
 
 URL: http://bio-bwa.sourceforge.net/
+
+Example: Illumina Sequencing Libray
+Reference genome: Homo sapiens, UCSC hg19 (URL: http://hgdownload.cse.ucsc.edu/goldenPath/hg19/bigZips/chromFa.tar.gz)
+
+1. Build index from reference genome
+	bwa index ref.fa
+
+2. Alignment with bwa-mem
+	 bwa mem ref.fa read1.fq read2.fq | samtools view -bS -o peread.bam -
